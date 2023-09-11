@@ -1,19 +1,21 @@
 #calculadora{
-    background: white;
+    background: rgb(183, 190, 190);
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
     float: left;
+}
+#detalle {
+    background: #98d7f0;
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: #171718;
+    border: 2px solid #000; /* Agregar un borde de 2px sólido de color negro */
+    padding: 10px; /* Agregar espacio entre el contenido y el borde */
+    box-sizing: border-box; /* Incluir el padding en el ancho total del elemento */
 }
 
-#detalle{
-    background: #fc95ad;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
-    height: 100%;
-    float: left;
-    color: #f6f5f7;
-}
 .contenido{
     /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
     position: relative;
@@ -34,9 +36,9 @@ button {
 	font-weight: bold;
 	padding: 12px 45px;
 	border-radius: 30px;
-	background-color: #f56385;
-	border: 1px solid #ee7591;
-	color: #FFFFFF;
+	background-color: #76eaff;
+	border: 1px solid #75c2ee;
+	color: #2b2828;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	transition: transform 20ms ease-in;
@@ -46,8 +48,8 @@ button:active {
 	transform: scale(0.95);
 }
 #contenedor{
-    width: 900px;
-    height: 500px;
+    width: 800px;
+    height: 400px;
     text-align: center;
     /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
     position: absolute;
@@ -59,7 +61,7 @@ button:active {
       0 10px 10px rgba(0,0,0,0.22);
   }
   #error{
-    color: red;
+    color: rgb(228, 83, 83);
     font-weight: bold;
     display: none;
 }
@@ -70,4 +72,29 @@ button:active {
     font-size: 25px;
     margin-bottom: 5px;
     display: none;
+}
+body {
+    background-image: url('imagenes/fondo.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+#resultados-container {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px; /* Espacio entre el botón y los resultados */
+    padding: 10px; /* Espacio alrededor de los resultados */
+    background-color: #f0f0f0; /* Color de fondo para el contenedor de resultados */
+    border: 1px solid #ddd; /* Borde del contenedor de resultados */
+    border-radius: 5px; /* Borde redondeado */
+    text-align: center; /* Centrar el contenido */
+}
+
+#resultados {
+    /* Estilo para los resultados dentro del contenedor */
+    font-weight: bold;
+    font-size: 18px;
+    color: #f81010;
+}
+
+#resultados-container.active {
+    display: block; /* Mostrar el contenedor cuando sea necesario */
 }
